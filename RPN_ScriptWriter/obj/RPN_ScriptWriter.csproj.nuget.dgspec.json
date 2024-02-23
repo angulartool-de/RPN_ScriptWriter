@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "W:\\#C-SHARP\\JGLib2024\\RPN_ScriptWriter\\RPN_ScriptWriter.csproj": {}
+    "W:\\#C-SHARP\\JGLib2024_RPN_ScriptWriter\\RPN_ScriptWriter\\RPN_ScriptWriter.csproj": {}
   },
   "projects": {
-    "W:\\#C-SHARP\\JGLib2024\\RPN_ScriptWriter\\RPN_ScriptWriter.csproj": {
+    "W:\\#C-SHARP\\JGLib2024_RPN_ScriptWriter\\RPN_ScriptWriter\\RPN_ScriptWriter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "W:\\#C-SHARP\\JGLib2024\\RPN_ScriptWriter\\RPN_ScriptWriter.csproj",
+        "projectUniqueName": "W:\\#C-SHARP\\JGLib2024_RPN_ScriptWriter\\RPN_ScriptWriter\\RPN_ScriptWriter.csproj",
         "projectName": "RPN_ScriptWriter",
-        "projectPath": "W:\\#C-SHARP\\JGLib2024\\RPN_ScriptWriter\\RPN_ScriptWriter.csproj",
+        "projectPath": "W:\\#C-SHARP\\JGLib2024_RPN_ScriptWriter\\RPN_ScriptWriter\\RPN_ScriptWriter.csproj",
         "packagesPath": "C:\\Users\\Windo\\.nuget\\packages\\",
-        "outputPath": "W:\\#C-SHARP\\JGLib2024\\RPN_ScriptWriter\\obj\\",
+        "outputPath": "W:\\#C-SHARP\\JGLib2024_RPN_ScriptWriter\\RPN_ScriptWriter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -44,6 +44,16 @@
       "frameworks": {
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.25.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

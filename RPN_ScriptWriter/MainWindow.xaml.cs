@@ -15,6 +15,11 @@ public partial class MainWindow : Window
         // FileStream fs = new FileStream();
     }
 
+    /// <summary>
+    /// Check all Key Inputs and React on specified actions
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void Rpn_OnKeyUp(object sender, KeyEventArgs e)
     {
         switch (e.Key)
@@ -43,14 +48,11 @@ public partial class MainWindow : Window
                 Protokoll.Text += "'" + "-" + "'" + "," + "\r\n";
                 Rpn.Text = null;
                 break;
+            case Key.Space:
+                Rpn.Text += "this.";
+                FocusSet();
+                break;
         }
-    }
-
-    private void TextRemove(int n)
-    {
-        Rpn.Text = Rpn.Text.Remove(Rpn.Text.Length - n, 1);
-
-        if (Rpn.Text.Length > 0) Protokoll.Text += "'" + Rpn.Text + "'" + "," + "\r\n";
     }
 
 
@@ -64,6 +66,12 @@ public partial class MainWindow : Window
         FocusSet();
     }
 
+
+    /// <summary>
+    /// Add this. to Input Text
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="e"></param>
     private void This_OnClick(object sender, RoutedEventArgs e)
     {
         var btn = (Button)sender;
@@ -72,6 +80,20 @@ public partial class MainWindow : Window
     }
 
 
+    /// <summary>
+    /// Routine to scip + - * /
+    /// </summary>
+    /// <param name="n"></param>
+    private void TextRemove(int n)
+    {
+        Rpn.Text = Rpn.Text.Remove(Rpn.Text.Length - n, 1);
+
+        if (Rpn.Text.Length > 0) Protokoll.Text += "'" + Rpn.Text + "'" + "," + "\r\n";
+    }
+
+    /// <summary>
+    /// Set focus on Input field
+    /// </summary>
     private void FocusSet()
     {
         Rpn.Focus();
